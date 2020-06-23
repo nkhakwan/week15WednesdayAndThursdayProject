@@ -9,12 +9,28 @@
 
 <body>
   <div class="container">
-    <div class="grow-buttons">
-      <button class="btn-success" id="feed">Add soil</button>
-      <button class="btn-success" id="hydrate">Apply water</button>
-      <button class="btn-success" id="giveLight">Give light</button>
+    <div class="choose-plant">
+      <div class="row">
+        <div class="col">
+          <label class="bob" for="tree">Tree <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXzxIaLpVXuIHucxqCArLWWO1G-HgOGDuERLRfZGW_ujzWoqxztw&s" alt="TreeMon" width="250" height="250"></label><br>
+          <input type="radio" id="tree" name="plant-choice" value="tree">
+        </div>
+        <div class="col">
+          <label class="bob" for="shrub">Shrub <img src="https://pyxis.nymag.com/v1/imgs/f22/cee/18a5c624814d1fee69692841d2f92e89ad-21-homer-bushes-lede.rhorizontal.w700.jpg" alt="TreeMon" width="250" height="250"></label><br>
+          <input type="radio" id="shrub" name="plant-choice" value="shrub">
+        </div>
+        <div class="col">
+          <label class="bob" for="flower">Flower <img src="https://img.favpng.com/1/23/14/common-sunflower-smiley-free-content-clip-art-png-favpng-0QfAiNPzQd5kfDL38bj7w11hB.jpg" alt="TreeMon" width="250" height="250"></label><br>
+          <input type="radio" id="flower" name="plant-choice" value="flower">
+        </div>
+      </div>
     </div>
     <h1 class="bob">Your Plant's Values</h1>
+      <div class="grow-buttons">
+        <button class="btn-success" id="feed">Add soil</button>
+        <button class="btn-success" id="hydrate">Apply water</button>
+        <button class="btn-success" id="giveLight">Give light</button>
+      </div>
     <div class="row">
       <div class="col">
         <h3 class="bob">Soil:<div id="soil-value">0</div>
@@ -26,7 +42,6 @@
         </h3>
 
       </div>
-
 
       <div class="col">
         <h3 class="bob">Light:<div id="light-value">0</div>

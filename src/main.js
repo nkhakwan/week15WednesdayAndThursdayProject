@@ -2,24 +2,31 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
-import { stateChanger } from "./plant.js";
-import { blueFood } from "./plant.js";
-import { giveLight } from "./plant.js";
-import { hydrate } from "./plant.js";
+import { stateChanger, blueFood, giveLight, hydrate, storeState, initialPlantState } from "./plant.js";
 
 $(document).ready(function () {
+
+  const tree = storeState(initialPlantState);
+  const shrub = storeState(initialPlantState);
+  const flower = storeState(initialPlantState);
+  
   $("#feed").click(function () {
-    const newState = stateChanger(blueFood);
-    $("#soil-value").text(newState.soil);
+
+    const thisTree = tree(blueFood);
+    $("#soil-value").text(thisTree.soil);
   });
 
   $("#hydrate").click(function () {
-    const newState = stateChanger(hydrate);
-    $("#water-value").text(newState.water);
+
+    const thisTree = tree(hydrate);
+    $("#water-value").text(thisTree.water);
+    // const newState = stateChanger(hydrate);
+    // $("#water-value").text(newState.water);
   });
 
   $("#giveLight").click(function () {
-    const newState = stateChanger(giveLight);
-    $("#light-value").text(newState.light);
+    const thisTree = tree(giveLight);
+    $("#light-value").text(thisTree.light);
+
   });
 });

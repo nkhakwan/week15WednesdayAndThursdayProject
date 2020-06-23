@@ -23,5 +23,12 @@ body {
 }
 
 .bob {
-  color: #2a35da;
+  color: #ffffff;
+  /* color: #2a35da; */
+}
+
+label {
+  /* float: left; */
+  padding: 0 1em;
+  text-align: center;
 }
