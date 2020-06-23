@@ -8,6 +8,8 @@ const changeState = (prop) => {
 }
 
 
+export const giveName = changeState("ability");
+
 export const giveLight = changeState("light")(4);
 
 export const hydrate = changeState("water")(3);
@@ -29,24 +31,22 @@ export const storeState = (initialPlantState) => {
 
 export const stateChanger = storeState();
 
-//const newgoofyplant3 = goofyPlantstateChanger(blueFood);
-
 // Plant abilities
-const canCharge = (sunflower) => ({
+export const canCharge = (sunflower) => ({
   charge: () => {
     return `The ${sunflower.name} charges up`
   }
 });
 
 // Shrub
-const soilBoost = (shrub) => ({
+export const soilBoost = (shrub) => ({
   endure: () => {
     return `The ${shrub.name} soil fertility increases`
   }
 });
 
 // Tree
-const waterRentention = (tree) => ({
+export const waterRentention = (tree) => ({
   absorb: () => {
     return `The ${tree.name} water supply is bolstered`
   }

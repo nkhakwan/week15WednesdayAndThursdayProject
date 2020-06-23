@@ -2,7 +2,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
-import { stateChanger, blueFood, giveLight, hydrate, storeState, initialPlantState } from "./plant.js";
+import { stateChanger, blueFood, giveLight, hydrate, storeState, initialPlantState, giveName, waterRentention, soilBoost, canCharge } from "./plant.js";
 
 $(document).ready(function () {
 
@@ -12,12 +12,14 @@ $(document).ready(function () {
   
   $("#feed").click(function () {
     var radioValue = $("input[name='plant-choice']:checked").val();
-
-    console.log(radioValue);
-
     
-    let temp;
+    const thisTreeName = tree(giveName(() => console.log("whatup")));
 
+    // const theTreeSays = thisTreeName.ability;
+    // console.log(theTreeSays);
+    //console.log(thisTreeName.name);
+
+    let temp;
     switch (radioValue) {
       case "tree":
         temp = tree;
@@ -33,19 +35,16 @@ $(document).ready(function () {
     }
     
     const thisPlant = temp(blueFood);
+    
+    
 
     $("#"+ radioValue + "-soil-value").text(thisPlant.soil);
   });
 
   $("#hydrate").click(function () {
     var radioValue = $("input[name='plant-choice']:checked").val();
-    console.log(radioValue);
-    // const thisTree = tree(hydrate);
-    // $("#tree-water-value").text(thisTree.water);
-
 
     let temp;
-
     switch (radioValue) {
       case "tree":
         temp = tree;
@@ -61,21 +60,13 @@ $(document).ready(function () {
     }
     
     const thisPlant = temp(hydrate);
-
     $("#"+ radioValue + "-water-value").text(thisPlant.water);
-
-
-    // const newState = stateChanger(hydrate);
-    // $("#water-value").text(newState.water);
   });
 
   $("#giveLight").click(function () {
     var radioValue = $("input[name='plant-choice']:checked").val();
-    console.log(radioValue);
-    // const thisTree = tree(giveLight);
-    // $("#tree-light-value").text(thisTree.light);
-    let temp;
 
+    let temp;
     switch (radioValue) {
       case "tree":
         temp = tree;
@@ -91,7 +82,6 @@ $(document).ready(function () {
     }
     
     const thisPlant = temp(giveLight);
-
     $("#"+ radioValue + "-light-value").text(thisPlant.light);
   });
 });
