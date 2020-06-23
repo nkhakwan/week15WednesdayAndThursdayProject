@@ -25,10 +25,15 @@ body {
 .bob {
   color: #ffffff;
   /* color: #2a35da; */
+  padding: .1rem;
 }
 
 label {
   /* float: left; */
   padding: 0 1em;
   text-align: center;
+}
+
+.grow-buttons {
+  padding: .25rem;
 }
