@@ -1,7 +1,7 @@
 {
   "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
   "extends": "eslint:recommended",
   "env": {
@@ -12,8 +12,12 @@
   },
   "rules": {
     "semi": 1,
-    "indent": ["warn", 2],
+    "indent": [
+      "warn",
+      2
+    ],
     "no-console": "warn",
-    "no-debugger": "warn"
+    "no-debugger": "warn",
+    "no-unused-vars": "warn"
   }
- }
+}
