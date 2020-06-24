@@ -36,8 +36,6 @@ $(document).ready(function () {
     
     const thisPlant = temp(blueFood);
     
-    
-
     $("#"+ radioValue + "-soil-value").text(thisPlant.soil);
   });
 

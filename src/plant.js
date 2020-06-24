@@ -7,7 +7,6 @@ const changeState = (prop) => {
   }
 }
 
-
 export const giveName = changeState("ability");
 
 export const giveLight = changeState("light")(4);
@@ -29,14 +28,20 @@ export const storeState = (initialPlantState) => {
   }
 }
 
+// Code below not affecting the display yet
 export const stateChanger = storeState();
+const tree = storeState(initialPlantState);
+const shrub = storeState(initialPlantState);
+
 
 // Plant abilities
-export const canCharge = (sunflower) => ({
+export const canCharge = (flower) => ({
   charge: () => {
-    return `The ${sunflower.name} charges up`
+    return `The ${flower.name} charges up`
   }
 });
+
+const flower = storeState(initialPlantState)(soil)(9);
 
 // Shrub
 export const soilBoost = (shrub) => ({
