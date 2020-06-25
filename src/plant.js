@@ -7,6 +7,11 @@ const changeState = (prop) => {
   }
 }
 
+const returnState = (state) => {
+  return state
+}
+
+
 export const giveName = changeState("ability");
 
 export const giveLight = changeState("light")(4);
@@ -28,11 +33,295 @@ export const storeState = (initialPlantState) => {
   }
 }
 
+const myInitialState = storeState(initialPlantState);
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const returnState = changeState()();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const ourInitialState = storeState(initialPlantState);
+// const returnState = ourInitialState()();
+
+
 // Code below not affecting the display yet
-export const stateChanger = storeState();
-const tree = storeState(initialPlantState);
-const shrub = storeState(initialPlantState);
-const flower = storeState(initialPlantState)(soil)(9);
+// Code below not affecting anything yet
+// The goal is to use composition to give the three plants a seperate defining ability
+// Flower a light multiplier of x2
+// Shrub a soil multiplier of x3
+// Tree a water multiplier of x4
+// export const stateChanger = storeState();
+// const tree = storeState(initialPlantState);
+// const shrub = storeState(initialPlantState);
+// const flower = storeState(initialPlantState)("soil")(9);
 
 
 // Plant abilities
